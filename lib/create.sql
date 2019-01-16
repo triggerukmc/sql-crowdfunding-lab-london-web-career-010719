@@ -7,11 +7,10 @@ CREATE TABLE projects(
 			end_date TEXT
 			);
 
-CREATE TABLE projects(
+CREATE TABLE users(
 			id INTEGER PRIMARY KEY,
-			title TEXT
-			catagory TEXT
-			funding_goal INTEGER
-			start_date TEXT
-			end_date TEXT
+			name TEXT
+			age INTEGER
 			);
+			
+			
