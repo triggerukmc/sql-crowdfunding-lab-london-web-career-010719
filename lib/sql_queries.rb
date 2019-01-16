@@ -38,11 +38,10 @@ ORDER BY SUM(pledges.amount), users.name"
 end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
-"SELECT users.name, SUM(pledges.amount)
-FROM users JOIN pledges
-WHERE users.id = pledges.user_id
-GROUP BY users.name
-ORDER BY SUM(pledges.amount), users.name"
+"SELECT projects.category, SUM(pledges.amount)
+FROM projects JOIN pledges
+WHERE project.id = pledges.project_id
+GROUP BY pledges"
 end
 
 def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_books_category
