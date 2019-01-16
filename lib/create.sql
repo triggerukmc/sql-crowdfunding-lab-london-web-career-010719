@@ -13,4 +13,9 @@ CREATE TABLE users(
 			age INTEGER
 			);
 			
-			
+CREATE TABLE projects(
+			id INTEGER PRIMARY KEY,
+			amount INTEGER
+			user_id INTEGER
+			project_id INTEGER
+			);
