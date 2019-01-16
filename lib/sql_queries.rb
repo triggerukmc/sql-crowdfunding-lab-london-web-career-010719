@@ -22,7 +22,10 @@ end
 
 
 def selects_the_titles_and_amount_over_goal_of_all_projects_that_have_met_their_funding_goal
-"SELECT col_name FROM table_name ORDER BY col_name ASC|DESC WHERE col_1 = value"
+"SELECT title.name, users.age, SUM(pledges.amount)
+FROM users JOIN pledges
+WHERE users.id = pledges.user_id
+GROUP BY users.name"
 end
 
 def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_them_by_the_amount_and_users_name
